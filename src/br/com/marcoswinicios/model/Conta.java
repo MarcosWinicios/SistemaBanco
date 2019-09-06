@@ -1,6 +1,6 @@
 package br.com.marcoswinicios.model;
 
-public class Conta implements Produto{
+public abstract class Conta implements Produto{
 	private double saldo;
 	private String numero;
 	private boolean situacao;
@@ -9,6 +9,21 @@ public class Conta implements Produto{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	public abstract void sacar();
 	
+	public abstract void depositar();
+	
+	public abstract void desativar();
+	
+	public abstract void transferir();
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 	
 }
